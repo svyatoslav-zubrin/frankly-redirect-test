@@ -14,12 +14,12 @@
                     }
                     return isMobile;
                 };		
-                
-                if (detectMobile()) {
-                    console.log("frnk. detectMobile=true");
+
+                const detected = detectMobile();
+                console.log("frnk. detectMobile=", detected);
+
+                if (detected) {
                     window.location = "andfrankly://token=xxx";
-                } else {
-                    console.log("frnk. detectMobile=false");
                 }
             }
         </script>
