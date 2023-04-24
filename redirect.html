@@ -3,9 +3,8 @@
     <head>
         <script>
             function check() {
-                detectMobile() {
+                function detectMobile() {
                     let isMobile = RegExp(/iPhone|iPod|iPad/i).test(navigator.userAgent);
-                
                     if (!isMobile) {
                         const isMac = RegExp(/Macintosh/i).test(navigator.userAgent);
                 
