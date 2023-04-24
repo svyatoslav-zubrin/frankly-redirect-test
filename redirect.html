@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function check() {
+                detectMobile() {
+                    let isMobile = RegExp(/iPhone|iPod|iPad/i).test(navigator.userAgent);
+                
+                    if (!isMobile) {
+                        const isMac = RegExp(/Macintosh/i).test(navigator.userAgent);
+                
+                        if (isMac && navigator.maxTouchPoints && navigator.maxTouchPoints > 2) {
+                        isMobile = true;
+                        }
+                    }
+                    return isMobile;
+                };		
+                
+                if(detectMobile()) {
+                    window.location = "www.andfrankly.com"; //'andfrankly://token';
+                } else {
+                    console.log("frnk. not an iPad");
+                    window.location = "www.andfrankly.com";
+                }
+            }
+        </script>
+    </head>
+<body onload="check()">
+</body>
+</html>
