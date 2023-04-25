@@ -1,13 +1,47 @@
 <!DOCTYPE html>
 <html>
-<body>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+<head>
+   <script>
+      function detectMobile() {
+         let isMobile = RegExp(/iPhone|iPod|iPad/i).test(navigator.userAgent);
+         if (!isMobile) {
+            const isMac = RegExp(/Macintosh/i).test(navigator.userAgent);
+            if (isMac && navigator.maxTouchPoints && navigator.maxTouchPoints > 2) {
+               isMobile = true;
+            }
+         }
+         return isMobile;
+      }
 
-<a href="redirect.html">
-   Click Here to Redirect
-</a>
+      function fill() {
+         var userAgent = window.navigator.userAgent
+         document.getElementById("useragent").textContent = userAgent
+
+         var maxTouchPoints = window.navigator.maxTouchPoints
+         document.getElementById("touchpoints").textContent = maxTouchPoints
+
+         var detect = detectMobile();
+         document.getElementById("detectmobile").textContent = detect
+      }
+   </script>
+</head>
+
+<body onload="fill()">
+
+   <h1>User Agent:</h1>
+   <div id="useragent">...</div>
+
+   <h1>Max touch points:</h1>
+   <div id="touchpoints">...</div>
+
+   <h1>Detect mobile:</h1>
+   <div id="detectmobile">...</div>
+
+   <a href="redirect.html">
+      Click Here to Redirect
+   </a>
 
 </body>
+
 </html>
