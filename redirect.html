@@ -19,9 +19,9 @@
                 console.log("frnk. detectMobile=", detected);
 
                 if (detected) {
-                    window.location = "andfrankly://token=xxx";
+                    window.location.href = "andfrankly://token=detected";
                 } else {
-                    alert("not detected");
+                    window.location.href = "andfrankly://token=not_detected";
                 }
             }
         </script>
