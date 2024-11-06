@@ -5,8 +5,8 @@
         "appID": "972U4NXUHR.ua.zubrin.AppLinksCheck2",
         "components": [
           {
-            "/": "/frankly-redirect-test/redirect.html",
-            "comment": "Intersepts opening of the redirect page"
+            "/": "/frankly-redirect-test/basic.html",
+            "comment": "Intersepts opening of the basic page"
           }
         ]
       }
